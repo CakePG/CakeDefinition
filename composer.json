@@ -1,0 +1,26 @@
+{
+    "name": "CakePG/CakeDefinition",
+    "description": "CakeDefinition plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "require": {
+        "cakephp/cakephp": "^3.5",
+        "cakedc/users": "^5.2",
+        "friendsofcake/search": "4.*",
+        "josegonzalez/cakephp-upload": "3.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CakePG\\CakeDefinition\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CakePG\\CakeDefinition\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+msgid "Definition"
+msgstr "定義リスト"
+
+msgid "Definition Category"
+msgstr "定義リストカテゴリ"
+
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+msgid "Website Admin Title"
+msgstr "ウェブサイト管理"
+
+msgid "Website Title"
+msgstr "ウェブサイト"
