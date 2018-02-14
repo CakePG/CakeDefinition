@@ -19,7 +19,7 @@
       <nav class="nav nav-pills nav-fill">
         <?= $this->Html->link('<i class="fa fa-th-list" aria-hidden="true"></i>'.__d('CakeDefinition', 'Definition Category').'一覧', ['controller' => 'definitionCategories', 'action' => 'index'], ['class' => 'btn btn-secondary', 'escape' => false]) ?>
         <?= $this->Html->link('<i class="fa fa-sort-amount-asc" aria-hidden="true"></i>並び替え', ['action' => 'sort', $definitionCategory->id], ['class' => 'btn btn-warning', 'escape' => false]) ?>
-        <?php if ($limit > $this->Paginator->counter("{{count}}")): ?>
+        <?php if (!$limit || $limit > $this->Paginator->counter("{{count}}")): ?>
           <?= $this->Html->link('<i class="fa fa-plus" aria-hidden="true"></i>新規登録', ['action' => 'add', $definitionCategory->id], ['class' => 'btn btn-success', 'escape' => false]) ?>
         <?php endif; ?>
       </nav>

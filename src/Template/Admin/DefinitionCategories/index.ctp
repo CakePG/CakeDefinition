@@ -19,7 +19,7 @@
         <?php if (!$fixed): ?>
           <?= $this->Html->link('<i class="fa fa-sort-amount-asc" aria-hidden="true"></i>並び替え', ['action' => 'sort'], ['class' => 'btn btn-warning', 'escape' => false]) ?>
 
-          <?php if ($limit > $this->Paginator->counter("{{count}}")): ?>
+          <?php if (!$limit || $limit > $this->Paginator->counter("{{count}}")): ?>
             <?= $this->Html->link('<i class="fa fa-plus" aria-hidden="true"></i>新規登録', ['action' => 'add'], ['class' => 'btn btn-success', 'escape' => false]) ?>
           <?php endif; ?>
         <?php endif; ?>

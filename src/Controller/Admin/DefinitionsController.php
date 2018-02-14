@@ -49,7 +49,7 @@ class DefinitionsController extends AppController
     public function add($categoryId)
     {
       // 登録制限
-        if (Configure::read('CakeDefinition.definition.limit') <= $this->Definitions->find('all', ['conditions' => ['definition_category_id' => $categoryId]])->count()) {
+        if (Configure::read('CakeDefinition.definition.limit') && Configure::read('CakeDefinition.definition.limit') <= $this->Definitions->find('all', ['conditions' => ['definition_category_id' => $categoryId]])->count()) {
             $this->Flash->error(__d('CakeDefinition', 'Definition').'はこれ以上登録できません');
             return $this->redirect(['action' => 'index', $categoryId]+$this->request->query());
         }
